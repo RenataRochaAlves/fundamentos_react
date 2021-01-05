@@ -1,0 +1,19 @@
+.Card {
+    background-color: rgb(241, 241, 241);
+    padding: 30px;
+    margin: 40px;
+    color: #929292;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 2px 10px 15px rgb(46, 46, 46, 0.15);
+}
+
+.Card .Title {
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 0.08em;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #7070703b;
+    color: #505050;
+}

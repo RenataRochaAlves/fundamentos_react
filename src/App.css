@@ -1,0 +1,26 @@
+.App {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.App .Card {
+    min-width: 500px;
+    max-width: 500px;
+}
+
+.App .Card table {
+    width: 100%;
+}
+
+.App .Card table td {
+    text-align: center;
+}
+
+.App .Card table thead {
+    background-color: white;
+}
+
+.App .Card table .Par {
+    background-color: rgb(255, 255, 255, 0.4);
+}
