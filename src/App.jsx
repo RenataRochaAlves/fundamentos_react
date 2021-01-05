@@ -2,6 +2,7 @@
 import React from 'react'
 import "./App.css";
 
+import Contador from './components/contador/Contador';
 import CompControlado from './components/forms/Input';
 import IndiretaPai from './components/comunicacao/IndiretaPai';
 import DiretaPai from './components/comunicacao/DiretaPai';
@@ -19,13 +20,14 @@ export default () => (
     // pode usar o React.Fragment (pode usar props) ou apenas <></> que não será afetado o html
     <React.Fragment>
         <div className="App">
+            <Card titulo="Contador">
+                <Contador numeroInicial={545} />
+            </Card>
             <Card titulo="Componente Controlado">
                 <CompControlado></CompControlado>
             </Card>
             <Card titulo="Comunicação Indireta">
-                <IndiretaPai>
-
-                </IndiretaPai>
+                <IndiretaPai></IndiretaPai>
             </Card>
 
             <Card titulo="Comunicação Direta">
