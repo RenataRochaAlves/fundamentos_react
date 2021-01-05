@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import Display from './Display';
+import Botoes from './Botoes';
+import PassoForm from './PassoForm';
 
 export default class Contador extends Component {
 
@@ -33,10 +36,10 @@ export default class Contador extends Component {
         })
     }
 
-    setPasso = (evt) => {
+    setPasso = (novoPasso) => {
         this.setState({
             // o + converte em um inteiro
-            passo: +evt.target.value
+            passo: novoPasso
         })
     }
     
@@ -47,14 +50,9 @@ export default class Contador extends Component {
                 <h2>Contador</h2>
                 {/* acessa as props da mesma forma, porém colocando o this na frente */}
                 {/* <p>Valor Inicial: {this.state.numero}</p> */}
-                <h3>Valor Atual: {this.state.numero}</h3>
-                <button onClick={this.inc} >+</button>
-                <button onClick={this.dec} >-</button>
-                <div>
-                    <label htmlFor="passoInput">Passo:</label>
-                    <input type="number" id="passoInput" 
-                    value={this.state.passo} onChange={this.setPasso}/>
-                </div>
+                <Display numero={this.state.numero}/>
+                <Botoes incrementar={this.inc} decrementar={this.dec}/>
+                <PassoForm passo={this.state.passo} setPasso={this.setPasso}/>
             </div>
         )
     }
